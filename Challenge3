@@ -1,0 +1,12 @@
+# object = {"x":{"y":{"z":"a"}}}
+# key = 'x/y/z'
+
+object = {"a":{"b":{"c":"d"}}}
+key = 'a/b/c'
+
+
+def my_function(object,key):
+    sk = key.split('/')
+    print(object[sk[0]][sk[1]][sk[2]])
+
+my_function(object,key)
