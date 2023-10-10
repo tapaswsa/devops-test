@@ -4,9 +4,16 @@
 object = {"a":{"b":{"c":"d"}}}
 key = 'a/b/c'
 
-
 def my_function(object,key):
-    sk = key.split('/')
-    print(object[sk[0]][sk[1]][sk[2]])
+    list = key.split('/')
 
+   
+    if (len(list) == 3):   # Checking length of list
+        if (len(list[0]) != 0) and (len(list[1]) != 0) and (len(list[2]) != 0):    # Checking empty condition
+            print(object[list[0]][list[1]][list[2]])
+        else:
+            print("Wrong input key")
+    else:
+        print("Wrong input key")
+    
 my_function(object,key)
